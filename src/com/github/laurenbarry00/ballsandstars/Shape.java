@@ -9,7 +9,13 @@ public interface Shape {
     int getSize();
     int getPositionX();
     int getPositionY();
-    int getSpeedX();
-    int getSpeedY();
+    int getSpeed();
     int getSizeGrowthRate();
+
+    void setSpeed(int speed);
+    void setColor(int r, int g, int b);
+    void setSizeGrowthRate(int speed);
+
+    void randomizeColor();
+    void randomizePosition();
 }

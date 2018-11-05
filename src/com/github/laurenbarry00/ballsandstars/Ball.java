@@ -18,9 +18,9 @@ public class Ball implements Shape {
         positionX = random.nextInt(MainGraphics.getHeightWidth()/5);
         positionY = random.nextInt(MainGraphics.getHeightWidth()/2);
         size = random.nextInt(50)+40;
-        speedX = random.nextInt(10)+1;
-        speedY = random.nextInt(10)+1;
-        sizeGrowthRate = random.nextInt(3)+1;
+        speedX = 15;
+        speedY = 15;
+        sizeGrowthRate = 5;
     }
 
     public void drawShape(Graphics g) {
@@ -58,13 +58,32 @@ public class Ball implements Shape {
     public int getPositionY() {
         return positionY;
     }
-    public int getSpeedX() {
+    public int getSpeed() {
         return speedX;
-    }
-    public int getSpeedY() {
-        return speedY;
     }
     public int getSizeGrowthRate() {
         return sizeGrowthRate;
+    }
+
+    public void setSizeGrowthRate(int speed) {
+        sizeGrowthRate = speed;
+    }
+    public void setSpeed(int speed) {
+        speedX = speed;
+        speedY = speed;
+    }
+    public void setColor(int r, int g, int b) {
+        this.color = new Color(r, g, b);
+    }
+
+    public void randomizeColor() {
+        Random random = new Random();
+        color = new Color(random.nextInt(256), random.nextInt(256), random.nextInt(256));
+    }
+
+    public void randomizePosition() {
+        Random random = new Random();
+        positionX = random.nextInt(MainGraphics.getHeightWidth());
+        positionY = random.nextInt(MainGraphics.getHeightWidth());
     }
 }
