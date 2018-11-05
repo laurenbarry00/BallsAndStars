@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 public class MainGraphics extends JFrame implements ActionListener {
     private static final int heightWidth = 800;
-    private static Shape[] shapesArray = new Shape[5];
+    private static Shape[] shapesArray = new Shape[6];
 
     public MainGraphics() {
         super("Balls and Stars");
@@ -51,13 +51,16 @@ public class MainGraphics extends JFrame implements ActionListener {
         Ball b1 = new Ball();
         Ball b2 = new Ball();
         Ball b3 = new Ball();
-        Ball b4 = new Ball();
-        Ball b5 = new Ball();
+
+        Star s1 = new Star();
+        Star s2 = new Star();
+        Star s3 = new Star();
         shapesArray[0] = b1;
         shapesArray[1] = b2;
         shapesArray[2] = b3;
-        shapesArray[3] = b4;
-        shapesArray[4] = b5;
+        shapesArray[3] = s1;
+        shapesArray[4] = s2;
+        shapesArray[5] = s3;
     }
 
     public void actionPerformed(ActionEvent e) {
